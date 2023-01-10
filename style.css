@@ -1,17 +1,29 @@
 * {
-    background-color: black;
-    color: white;
+    background-color:var(--bg-color);
+    color:var(--text-color);
+}
+
+.dark-mode {
+    --bg-color: black;
+    --text-color: white;
+  }
+  
+.light-mode {
+    --bg-color: white;
+    --text-color: black;
+  }
+
+.listItemHeader{
+    background-color: var(--text-color) ;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: var(--text-color);
 }
 
 body {
     margin: 0;
     width: 100%;
+    text-decoration: none;
 }
-
-/* * {
-    background-color: white;
-    color: black;
-} */
 
 a {
     text-decoration: none;
@@ -218,8 +230,10 @@ input:checked+.slider:before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 10px 5px;
+    border-radius: 20px;
     width: 80%;
+    background-color: black;
 }
 
 .buttonDownload {
@@ -604,7 +618,7 @@ input:checked+.slider:before {
 .card {
     width: 360px;
     background-color: #fbfbfb1a;
-    border: 2px solid #fbfbfb8e;
+    border: 2px solid var(--text-color);
     border-radius: 15px;
     font-family: 'Roboto', sans-serif;
     margin: 30px;
