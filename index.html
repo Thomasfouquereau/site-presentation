@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" /> 
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500;700&display=swap"
@@ -14,12 +14,12 @@
 
 <body>
     <nav class="navBar">
-        <img src="./asset/Logo.svg" alt="logo">
+        <a href="#"><img class="Logo" src="./asset/Logo.svg" alt="logo"></a>
         <ul class="navList">
-            <li class="listItems">Home</li>
-            <li class="listItems">Portfolio</li>
-            <li class="listItems">Skills</li>
-            <li class="listItems">About Me</li>
+            <li class="listItems"><a href="#">Home</a></li>
+            <li class="listItems"><a href="#PORTFOLIO">Portfolio</a></li>
+            <li class="listItems"><a href="#SKILLS">Skills</a></li>
+            <li class="listItems"><a href="#ABOUT">About Me</a></li>
         </ul>
         <div>
             <label class="switch">
@@ -32,14 +32,19 @@
     </nav>
     <header class="header">
         <div class="leftHeader">
-            <h1 class="HeaderTitle">PRODUCT <img class="logoTitleHeader" src="./asset/Portal.svg" alt="logo"></br>DESIGNER</h1>
+            <h1 class="HeaderTitle">PRODUCT <img class="logoTitleHeader" src="./asset/Portal.svg"
+                    alt="logo"></br>DESIGNER</h1>
             <span class="subTitle">CRISTIAN MUÑOZ</span>
             <ul class="headerList">
-                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Instagram.svg" alt="Instagram logo"></li>
+                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Instagram.svg" alt="Instagram logo">
+                </li>
                 <li class="listItemHeader"><img class="listItemHeader" src="./asset/Figma.svg" alt="Figma logo""></li>
-                <li class="listItemHeader"><img class="listItemHeader" src=" ./asset/LinkedIn.svg" alt="LinkedIn logo"></li>
-                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Twitter.svg" alt="Twitter logo"></li>
-                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Telegram.svg" alt="Telegram logo"></li>
+                <li class=" listItemHeader"><img class="listItemHeader" src=" ./asset/LinkedIn.svg"
+                        alt="LinkedIn logo"></li>
+                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Twitter.svg" alt="Twitter logo">
+                </li>
+                <li class="listItemHeader"><img class="listItemHeader" src="./asset/Telegram.svg" alt="Telegram logo">
+                </li>
                 <li class="listItemHeader"><img class="listItemHeader" src="./asset/Medium.svg" alt="Medium logo"></li>
             </ul>
             <button class="buttonDownload">Download Curriculum Vitae</button>
@@ -64,7 +69,7 @@
             </div>
         </div>
     </section>
-    <section class="section2">
+    <section class="section2" id="PORTFOLIO">
         <h2 class="sectionTitle">PORTFOLIO</h2>
         <div class="cardContainer">
             <div class="card">
@@ -156,7 +161,7 @@
             </div>
         </div>
     </section>
-    <section class="section2">
+    <section class="section2" id="SKILLS">
         <h2 class="sectionTitle">SKILLS</h2>
         <div class="containerSkillsAll">
             <div class="containerSkills">
@@ -207,7 +212,7 @@
         </p>
         <img class="section4img" src="./asset/Shield 1.svg" alt="shield Logo">
     </section>
-    <section class="section2">
+    <section class="section2" id="ABOUT">
         <h2 class="sectionTitle">ABOUT ME <img src="./asset/Zig Zag.svg"></h2>
         <div class="sectionCard">
             <p class="sectionPar">
@@ -234,21 +239,23 @@
             <img class="footerImg" src="./asset/Escultures.png" alt="img">
             <div class="containerTextFooter">
                 <h2 class="titleFooter">Thanks for visit my website</h2>
-                <p class="ParaFooter">If you have any questions you can write me to any of my social networks, I am sure I will answer you.</p>
+                <p class="ParaFooter">If you have any questions you can write me to any of my social networks, I am sure
+                    I will answer you.</p>
             </div>
             <img class="imgFooter" src="./asset/Frame 35.svg" alt="wave">
         </div>
         <div class="footerTowItem">
             <img class="footerLogo" src="./asset/Logo.svg" alt="logo">
             <ul class="listFooter">
-                <li class="footerItem">Home</li>
-                <li class="footerItem">Portfolio</li>
-                <li class="footerItem">Skills</li>
-                <li class="footerItem">About Me</li>
+                <li class="footerItem"><a href="#">Home</a></li>
+                <li class="footerItem"><a href="#PORTFOLIO">Portfolio</a></li>
+                <li class="footerItem"><a href="#SKILLS">Skills</a></li>
+                <li class="footerItem"><a href="#ABOUT">About Me</a></li>
             </ul>
         </div>
 
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>

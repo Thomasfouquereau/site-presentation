@@ -13,6 +13,17 @@ body {
     color: black;
 } */
 
+a {
+    text-decoration: none;
+    background-color: #925af300;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
+}
+
+a:hover {
+    color: #925af3;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.5s;
+}
+
 
 
 /* nav bar */
@@ -105,6 +116,13 @@ input:checked+.slider:before {
     height: 40px;
     border-radius: 5px;
     margin-left: 20px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.navButton:hover {
+    background-color: #925af375;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 924px) {
@@ -145,6 +163,7 @@ input:checked+.slider:before {
         transform: translateX(-50%);
         padding: 0;
         width: 100%;
+        text-align: center;
     }
 
     .listItems {
@@ -212,6 +231,13 @@ input:checked+.slider:before {
     width: 80%;
     margin: 0px;
     margin-top: 20px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.buttonDownload:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    background: linear-gradient(0.25turn, #FA709A, #FEE140);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1710px) and (min-width: 1380px) {
@@ -403,6 +429,21 @@ input:checked+.slider:before {
 
 .itemImg {
     background-color: #925af300;
+    animation: infinite bounce 8s;
+}
+
+@keyframes bounce {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
 }
 
 @media screen and (max-width: 2228px) and (min-width: 1710px) {
@@ -489,6 +530,8 @@ input:checked+.slider:before {
         width: 515px;
         flex-direction: column;
         align-items: center;
+        margin-top: 70px;
+        margin-bottom: 60px;
     }
 
     .itemTitle {
@@ -554,7 +597,8 @@ input:checked+.slider:before {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    opacity: 0;
 }
 
 .card {
@@ -565,6 +609,23 @@ input:checked+.slider:before {
     font-family: 'Roboto', sans-serif;
     margin: 30px;
 }
+
+.cardContainer.active {
+    opacity: 1;
+        animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-bck {
+    0% {
+      transform: translateZ(80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
 
 .cardImg {
     margin-top: 25px;
@@ -736,6 +797,11 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 738px) {
+
+    .section2 {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
 
     .card {
         display: flex;
@@ -944,7 +1010,32 @@ input:checked+.slider:before {
 
 .section4img {
     background-color: #925af300;
+    animation: infinite jello-vertical 2s both;
 }
+
+@keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+      transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
 
 @media screen and (max-width: 1970px) and (min-width: 1522px) {
 
@@ -1237,6 +1328,10 @@ input:checked+.slider:before {
         width: 45%;
     }
 
+    .footerFirstItem {
+        margin-top: 70px;
+    }
+
     .containerTextFooter {
         width: 70%;
         margin: 0 auto;
@@ -1281,6 +1376,10 @@ input:checked+.slider:before {
         height: 85px;
     }
 
+    .footerFirstItem {
+        margin-top: 70px;
+    }
+
 }
 
 @media screen and (max-width: 560px) {
@@ -1300,6 +1399,10 @@ input:checked+.slider:before {
         width: 100px;
         height: 40px;
         margin: 0;
+    }
+
+    .footerFirstItem {
+        margin-top: 50px;
     }
 
 }
@@ -1332,6 +1435,10 @@ input:checked+.slider:before {
 
     .imgFooter {
         display: none;
+    }
+
+    .footerFirstItem {
+        margin-top: 30px;
     }
 
 }
