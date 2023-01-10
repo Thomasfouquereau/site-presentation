@@ -5,6 +5,7 @@
 
 body {
     margin: 0;
+    width: 100%;
 }
 
 /* * {
@@ -131,6 +132,36 @@ input:checked+.slider:before {
     .listItems {
         width: 100%;
         white-space: nowrap;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .navList {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0;
+        width: 100%;
+    }
+
+    .listItems {
+        width: 20%;
+        white-space: nowrap;
+        padding: 8px;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+
+    .listItems {
+        width: 20%;
+        white-space: nowrap;
+        padding: 8px;
+        font-size: 12px;
     }
 
 }
@@ -304,21 +335,26 @@ input:checked+.slider:before {
 @media screen and (max-width: 432px) {
 
     .HeaderTitle {
-        font-size: 80px;
-        line-height: 5rem;
+        font-size: 60px;
+        line-height: 4rem;
         text-align: center;
     }
 
     .subTitle {
-        font-size: 57px;
+        font-size: 40px;
+        margin-right: 0;
     }
 
     .headerList {
-        width: 80%;
+        width: 100%;
+        max-width: 300px;
+        min-width: 0px;
     }
 
     .buttonDownload {
-        width: 80%;
+        width: 100%;
+        max-width: 300px;
+        min-width: 0px;
     }
 
     .listItemHeader {
@@ -531,9 +567,9 @@ input:checked+.slider:before {
 }
 
 .cardImg {
+    margin-top: 25px;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 25px;
 }
 
 .cardTitle {
@@ -690,15 +726,43 @@ input:checked+.slider:before {
     }
 
     .card {
-        width: 100%;
+        width: 90%;
         margin: 0;
         margin-bottom: 50px;
     }
 
-    .cardImg {
-        width: 86%;
+
+
+}
+
+@media screen and (max-width: 738px) {
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
+    .cardButton {
+        width: 90%;
+        transform: translateX(0%);
+        margin-left: 0;
+    }
+
+    .cardImg {
+        width: 90%;
+        transform: translateX(0%);
+        margin-left: 0;
+    }
+
+    .cardTitle {
+        margin-left: 0;
+    }
+
+    .tagsList {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -716,10 +780,6 @@ input:checked+.slider:before {
         width: 100%;
         margin: 0;
         margin-bottom: 50px;
-    }
-
-    .cardImg {
-        width: 86%;
     }
 
     .tag {
@@ -1223,18 +1283,20 @@ input:checked+.slider:before {
 
 }
 
-@media  screen and (max-width: 560px) {
+@media screen and (max-width: 560px) {
 
-    .footerTowItem{
+    .footerTowItem {
         flex-direction: column-reverse;
         justify-content: center
     }
 
     .listFooter {
-        width: 100%;
+        width: 90%;
+        padding: 0;
+        margin: 0;
     }
 
-    .footerLogo{
+    .footerLogo {
         width: 100px;
         height: 40px;
         margin: 0;
